@@ -6,6 +6,10 @@ import { Character } from "pages/Character";
 import { Login } from "pages/Login";
 
 function App() {
+  if (!localStorage.getItem("isLoggedIn")) {
+    localStorage.setItem("isLoggedIn", JSON.stringify(false));
+  }
+  
   return (
     <Routes>
       <Route
