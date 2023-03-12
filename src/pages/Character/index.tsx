@@ -16,6 +16,7 @@ export const Character = () => {
     if (id) {
       getCharacter(id).then((character) => setCharacter(character));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onClick: React.MouseEventHandler<HTMLButtonElement> = () => {
